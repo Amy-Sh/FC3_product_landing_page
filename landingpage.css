@@ -2,33 +2,26 @@
 
 /* reset all css*/
 
-html,
-body,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-div {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Open Sans', sans-serif;
-}
-
 li {
     list-style: none;
 }
 
 a {
     text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*set colors*/
+
+:root {
+    --color-base: #D9CDBF;
+    --color-white: #F2F2F0;
 }
 
 
@@ -42,6 +35,69 @@ h2 {
     font-family: 'Work Sans', sans-serif;
 }
 
-p {
+h3 {
+    font-family: 'Work Sans', sans-serif;
+}
+
+p,
+li {
     font-family: 'Roboto', sans-serif;
+}
+
+
+/* global element*/
+
+body {
+    background-color: var(--color-base);
+}
+
+
+/* header */
+
+header {
+    background-color: var(--color-white);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    min-height: 75px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-bar>ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-bar>ul>li {
+    padding: 5px;
+}
+
+
+/*For tablet*/
+
+@media only screen and (min-width:600px) {
+    header {
+        background-color: var(--color-base);
+    }
+    #nav-bar>ul {
+        flex-direction: row;
+    }
+    #nav-bar>ul>li {
+        padding: 10px;
+    }
+}
+
+
+/*For desktop */
+
+@media only screen and (min-width:768px) {
+    header {
+        background-color: black;
+    }
+    #nav-bar>ul>li {
+        padding: 20px;
+    }
 }
