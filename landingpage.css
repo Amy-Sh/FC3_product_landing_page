@@ -21,8 +21,9 @@ a {
 
 :root {
     --color-base: #E6E4DF;
-    --color-white: #FFFEF7;
+    --color-white: #ffffff;
     --color-gray: #807F7C;
+    --color-black: #403F3E;
 }
 
 
@@ -48,7 +49,9 @@ h3 {
 
 p,
 li,
-label {
+label,
+input,
+button {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -137,6 +140,45 @@ header {
 
 /*contact*/
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.2em;
+    padding: 3px 0;
+}
+
+input,
+button {
+    font-size: inherit;
+    line-height: 2rem;
+    border: solid 1px var(--color-gray);
+}
+
+button {
+    width: 30%;
+    margin: 1rem 0;
+    padding: .2rem;
+    background-color: var(--color-white);
+    border: solid 1px var(--color-gray);
+}
+
+button:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: solid 1px var(--color-black);
+}
+
+::placeholder {
+    background-color: var(--color-white);
+    padding: .5rem;
+}
+
+
+/*aside*/
+
 aside {
     background-color: var(--color-gray);
 }
@@ -204,6 +246,9 @@ aside>.container>ul {
     .bread-mode {
         width: 320px;
     }
+    button {
+        width: 20%;
+    }
 }
 
 
@@ -229,5 +274,14 @@ aside>.container>ul {
     }
     .mode>p {
         font-size: 1.13em;
+    }
+    input {
+        width: 80%;
+    }
+    .form-group {
+        margin-bottom: .8rem;
+    }
+    button {
+        width: 28%;
     }
 }
