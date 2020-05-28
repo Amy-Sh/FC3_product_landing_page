@@ -137,9 +137,6 @@ header {
 
 /*contact*/
 
-
-/*aside*/
-
 aside {
     background-color: var(--color-gray);
 }
@@ -177,6 +174,9 @@ aside>.container>ul {
     .top-wrapper {
         height: 350px;
     }
+    .mode>p {
+        line-height: 2em;
+    }
 }
 
 
@@ -195,6 +195,14 @@ aside>.container>ul {
     }
     .top-wrapper {
         height: 400px;
+    }
+    .five-modes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .bread-mode {
+        width: 320px;
     }
 }
 
@@ -215,5 +223,11 @@ aside>.container>ul {
     }
     .top-wrapper {
         height: 600px;
+    }
+    .bread-mode {
+        width: 420px;
+    }
+    .mode>p {
+        font-size: 1.13em;
     }
 }
